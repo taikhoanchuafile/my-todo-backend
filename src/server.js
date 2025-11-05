@@ -14,10 +14,12 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? [process.env.FRONTEND]
+        ? [process.env.FRONTEND_URL]
         : ["http://localhost:5173"],
   })
 );
+
+console.log(process.env.FRONTEND_URL);
 
 //Xử lý
 app.use("/api/tasks", taskRouter);
