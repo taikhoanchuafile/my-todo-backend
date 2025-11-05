@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === "producttion"
+      process.env.NODE_ENV === "production"
         ? [process.env.FRONTEND]
         : ["http://localhost:5173"],
   })
